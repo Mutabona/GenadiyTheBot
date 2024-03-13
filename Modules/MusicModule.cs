@@ -33,14 +33,14 @@ namespace bot.Modules
         {
             if (_lavaNode.HasPlayer(Context.Guild))
             {
-                await ReplyAsync("jopaochko");
+                await ReplyAsync("j");
                 return;
             }
 
             var voiceState = Context.User as IVoiceState;
             if (voiceState?.VoiceChannel == null)
             {
-                await ReplyAsync("ochkojopa");
+                await ReplyAsync("o");
                 return;
             }
 
@@ -60,13 +60,13 @@ namespace bot.Modules
         {
             if (string.IsNullOrWhiteSpace(query))
             {
-                await ReplyAsync("С даунами не общаюсь");
+                await ReplyAsync("С");
                 return;
             }
 
             if (!_lavaNode.HasPlayer(Context.Guild))
             {
-                await ReplyAsync("Я говна наел");
+                await ReplyAsync("Я");
                 return;
             }
 
@@ -74,7 +74,7 @@ namespace bot.Modules
             if (searchResponse.Status == Victoria.Responses.Search.SearchStatus.LoadFailed ||
                 searchResponse.Status == Victoria.Responses.Search.SearchStatus.NoMatches)
             {
-                await ReplyAsync("Нихуя не нашёл");
+                await ReplyAsync("Н");
                 return;
             }
 

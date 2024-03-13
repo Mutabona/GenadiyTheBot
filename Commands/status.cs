@@ -15,7 +15,6 @@ namespace bot.Commands
     public class status : ModuleBase<SocketCommandContext>
     {
         [Command("status")]
-        [RequireRole("Верховный гей")]
         public async Task statusAsync(params string[] msg)
         {
             var user = Context.User;
