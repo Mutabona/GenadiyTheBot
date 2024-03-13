@@ -18,6 +18,7 @@ namespace bot.Services
         public static CommandService _commands;
         private static IConfigurationRoot _config;
         private readonly LavaNode _lavaNode;
+
         public CommandHandler(DiscordSocketClient discord, CommandService commands, IConfigurationRoot config, IServiceProvider provider, LavaNode lavaNode)
         {
             _provider = provider;
@@ -48,6 +49,7 @@ namespace bot.Services
                 }
             }
         }
+
         private async Task OnReadyAsync()
         {
             Console.WriteLine($"Connected as {_discord.CurrentUser.Username}#{_discord.CurrentUser.Discriminator}");
